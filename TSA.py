@@ -1,5 +1,4 @@
 import os
-from tkinter import *
 print('#######################################################################################################')
 os.system('figlet Twitter Sentiment Analyisis')
 print('Note:1)Polarity=in sentiment analysis it refers to identifying sentiment orientation (positive, neutral, and negative).')
@@ -11,12 +10,4 @@ os.system('python test.py > op.txt')
 #os.system('kate op.txt')
 file=open("op.txt","r")
 opt=file.read()
-try:
-    root = Tk()
-    root.title('Sentiment Analysis Report')
-    T = Text(root, height=200, width=150,font=("arial",12,"bold"),fg="red",bg="white")
-    T.pack()
-    T.insert(END,opt)
-    mainloop()
-except TclError:
-    os.system('firefox op.txt')
+os.system('notepad op.txt')
